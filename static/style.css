@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    background-image: url('/static/cyberbullying.jpg');
+    font-family: Arial, sans-serif;
+    color: #070505;
+    text-align: center;
+}
+
+/* Container for the form and header */
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* Header Image */
+.header-img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Styling */
+.title {
+    font-family: sans-serif;
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button Styles */
+.submit-btn, .clear-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.clear-btn {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+.clear-btn:hover {
+    background-color: #e53935;
+}
+
+/* Prediction Result Styling */
+.result {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Report Link */
+.report-link {
+    display: inline-block;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.report-link:hover {
+    background-color: #e53935;
+}

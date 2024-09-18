@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberbullying Detection </title>
+</head>
+<style>
+  /* General Styles */
+body {
+  background-image: url('../static/bullying1.jpg');
+    font-family: Arial, sans-serif;
+    color: #fffafa;
+    text-align: center;
+    background-size: cover;
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+/* Container for the form and header */
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/* Header Image */
+.header-img {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Styling */
+.title {
+    font-family: sans-serif;
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #2b2727;
+}
+
+/* Button Styles */
+.submit-btn, .clear-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.clear-btn {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+.clear-btn:hover {
+    background-color: #e53935;
+}
+
+/* Prediction Result Styling */
+.result {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Report Link */
+.report-link {
+    display: inline-block;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.report-link:hover {
+    background-color: #e53935;
+}
+
+</style>
+<body>
+    <div class="container">
+        <img class="header-img" src="../static/head.png" alt="Logo">
+        <div class="form-container">
+            <h1 class="title"><i>Cyberbullying Detection</i></h1>
+            <form id="commentForm" action='/predict' method="POST">
+                <label for="commentArea">Paste the comment below and click detect:</label>
+                <textarea id="commentArea" name="comment" rows="4" cols="50" placeholder="Enter your comment..."></textarea>
+                <br><br>
+                <input type="submit" value="Detect" class="submit-btn">
+                <button type="button" id="clearBtn" class="clear-btn">Clear</button>
+                <div id="predictionResult" class="result"></div>
+                <br>
+                <a href="https://cyberbaap.org/cyberbullying/reporting/" target="_blank" class="report-link">Report</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+      // Get references to form elements
+const form = document.getElementById('commentForm');
+const clearBtn = document.getElementById('clearBtn');
+const commentArea = document.getElementById('commentArea');
+const resultDiv = document.getElementById('predictionResult');
+
+// Clear textarea when clear button is clicked
+clearBtn.addEventListener('click', function() {
+    commentArea.value = '';
+    resultDiv.textContent = '';
+});
+
+// Handle form submission with prediction result display
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Simulate prediction result (replace with actual prediction logic)
+    const prediction = "Cyberbullying Detected!";
+    resultDiv.textContent = prediction;
+});
+    </script>
+
+</body>
+</html>
+ 
